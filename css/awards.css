@@ -1,6 +1,3 @@
-/* =============================
-   Awards Timeline (Clean Blue Version)
-   ============================= */
 
 #awards-section {
   background: #f9fafc;
@@ -62,21 +59,24 @@
   transition: all 0.3s ease;
 }
 
-/* --- li 전체 영역 클릭 가능하게 하는 스타일 --- */
+/* --- 링크 색상: 반드시 검정 유지 (전역 a 스타일 무력화) --- */
 .timeline ul li a {
   display: block;
-  color: inherit !important;   /* a 태그도 검정색 유지 */
+  color: #333 !important;       /* 전역 a {color:#3e64ff} 완전 차단 */
   text-decoration: none;
   width: 100%;
   height: 100%;
   padding: 4px 0;
 }
 
-.timeline ul li a:hover {
-  color: inherit !important;   /* hover해도 파란색으로 안 변함 */
+/* --- hover 시 링크 색상도 변화 없음 --- */
+.timeline ul li a:hover,
+.timeline ul li a:focus {
+  color: #333 !important;
+  text-decoration: none;
 }
 
-/* --- hover 시 li 효과 --- */
+/* --- hover 시 li 강조 효과 --- */
 .timeline li:hover {
   background-color: rgba(0, 123, 255, 0.05);
   border-left: 3px solid #3e64ff;
@@ -84,9 +84,9 @@
   border-radius: 4px;
 }
 
-/* --- 강조 텍스트(b 태그) --- */
+/* --- 강조 텍스트 (b 태그) --- */
 .timeline li b {
-  color: #000; /* 상 종류(대상/금상 등)는 검정 강조 */
+  color: #000;
 }
 
 /* --- 반응형 --- */
