@@ -67,16 +67,25 @@
 
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-	    event.preventDefault();
+  event.preventDefault();
 
-	    var href = $.attr(this, 'href');
+  var href = $.attr(this, 'href');
+  var offset = 180; 
 
-	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
-		});
+  // About 전용
+  if (href === '#about-section') {
+    offset = 75;   
+  }
+
+  // Awards 전용
+  if (href === '#awards-section') {
+    offset = 80; 
+  }
+
+  $('html, body').animate({
+    scrollTop: $(href).offset().top - offset
+  }, 500);
+});
 
 	};
 
