@@ -13918,3 +13918,105 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+.uni-info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.uni-info h2 {
+	margin: 0;
+}
+
+.uni-info .gpa {
+	font-size: 0.95rem;
+	color: #999999;
+	white-space: nowrap;
+}
+
+/* ===== 공통 li 복구 규칙 ===== */
+#page-1 ul,
+#page-2 ul,
+#page-3 ul {
+  list-style: disc !important;
+  padding-left: 20px !important;
+  margin-left: 0 !important;
+}
+
+/* li 간격 */
+#page-1 li,
+#page-2 li,
+#page-3 li {
+  margin-bottom: 4px;
+}
+
+
+.cert-table {
+  border-collapse: collapse;
+  border: none;
+  /* 테이블 외곽선 제거 */
+}
+
+.cert-table tr:last-child td {
+  border-bottom: none;
+  /* 맨 아래 선 제거 */
+}
+
+.cert-table thead tr th {
+  border-top: none !important;
+  /* 맨 위 선 제거 */
+}
+
+.cert-table th,
+.cert-table td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* 마지막 행 아래 선 제거 (선택) */
+#page-4 .cert-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cert-table th,
+.cert-align-center {
+  text-align: center;
+}
+
+.cert-table th {
+  color: #000;
+}
+
+/* 데스크톱: hover 가능한 기기에서만 hover 효과 적용*/
+@media (hover: hover) and (pointer: fine) {
+  .project:hover .overlay {
+    opacity: 1;
+  }
+}
+
+/* 모바일: hover 효과 제거 (항상 기본 상태 유지)*/
+@media (hover: none) and (pointer: coarse) {
+  .project .overlay {
+    opacity: 0 !important;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .project .text {
+    opacity: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* --- 공통: 모바일에서 네비, 테이블 비고 숨기기 --- */
+  #navi {
+    display: none !important;
+  }
+
+  table tr th:last-child,
+  table tr td:last-child {
+    display: none !important;
+  }
