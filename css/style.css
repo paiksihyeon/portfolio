@@ -12879,14 +12879,14 @@ h5,
 /* 데스크톱: hover 가능한 기기에서만 hover 효과 적용*/
 @media (hover: hover) and (pointer: fine) {
   .project:hover .overlay {
-    opacity: 1;     
+    opacity: 1;
   }
 }
 
 /* 모바일: hover 효과 제거 (항상 기본 상태 유지)*/
 @media (hover: none) and (pointer: coarse) {
   .project .overlay {
-    opacity: 0 !important;  
+    opacity: 0 !important;
   }
 }
 
@@ -12894,7 +12894,7 @@ h5,
   .project .text {
     opacity: 0 !important;
   }
-} 
+}
 
 .project .overlay {
   position: absolute;
@@ -13071,6 +13071,8 @@ textarea.form-control {
   background: #000000;
   padding: 7em 0;
   z-index: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .ftco-footer .ftco-footer-logo {
@@ -13920,19 +13922,19 @@ textarea.form-control {
 }
 
 .uni-info {
-	display: flex;
-	align-items: center;
-	gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .uni-info h2 {
-	margin: 0;
+  margin: 0;
 }
 
 .uni-info .gpa {
-	font-size: 0.95rem;
-	color: #999999;
-	white-space: nowrap;
+  font-size: 0.95rem;
+  color: #999999;
+  white-space: nowrap;
 }
 
 /* ===== 공통 li 복구 규칙 ===== */
