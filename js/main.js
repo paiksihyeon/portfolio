@@ -40,8 +40,6 @@
 	// Scrollax
    $.Scrollax();
 
-
-
    // Burger Menu
 	var burgerMenu = function() {
 
@@ -62,25 +60,19 @@
 	};
 	burgerMenu();
 
-
 	var onePageClick = function() {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
+$(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
 
-  var href = $.attr(this, 'href');
-  var offset = 180; 
+  var href = $(this).attr('href');
+  if (!$(href).length) return;
 
-  // About 전용
-  if (href === '#about-section') {
-    offset = 75;   
-  }
+  var offset = 180;
 
-  // Awards 전용
-  if (href === '#awards-section') {
-    offset = 80; 
-  }
+  if (href === '#about-section') offset = 75;
+  if (href === '#awards-section') offset = 80;
 
   $('html, body').animate({
     scrollTop: $(href).offset().top - offset
@@ -91,7 +83,6 @@
 
 	onePageClick();
 	
-
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
